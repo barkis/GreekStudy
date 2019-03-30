@@ -1,0 +1,42 @@
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesalt.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesalt.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesaltsmooth.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesaltsmooth.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiota.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiota.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiotasmooth.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiotasmooth.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.gk
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.gk1
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesU.en
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesU.GK
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesUsmooth.gk
+C:\ProgramData\vocablists\delcl3c.stx
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\EntryTest.htm
+C:\ProgramData\vocablists\first.gkv
+C:\ProgramData\vocablists\give.stx
+C:\ProgramData\vocablists\Grama.stx
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GreekEntry.htm
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.exe
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GV1.css
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\GreekVocab.chm
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\NounEntry.htm
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\Opening.htm
+C:\ProgramData\vocablists\second.gkv
+C:\ProgramData\vocablists\Sect1.gkv
+C:\ProgramData\vocablists\Sect2.gkv
+C:\ProgramData\vocablists\Sect3.gkv
+C:\ProgramData\vocablists\Sect4.gkv
+C:\ProgramData\vocablists\Sect5.gkv
+C:\ProgramData\vocablists\Sect6.gkv
+C:\ProgramData\vocablists\Sect7.gkv
+C:\ProgramData\vocablists\Sect8.gkv
+C:\ProgramData\vocablists\Sect9.gkv
+C:\ProgramData\vocablists\stop.stx
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\topics.htm
+C:\ProgramData\vocablists\verb1.stx
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\VocabularyEntry.htm

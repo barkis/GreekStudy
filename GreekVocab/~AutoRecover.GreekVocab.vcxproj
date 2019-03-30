@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2F3E35F4-36B4-4253-B8FC-4EF7185E5A40}</ProjectGuid>
+    <RootNamespace>GreekVocab</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\HTML Help Workshop\include;C:\boost_1_57_0\boost_1_57_0;C:\Program Files\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost_1_57_0\boost_1_57_0\stage\lib;C:\Program Files %28x86%29\HTML Help Workshop\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\boost_1_57_0\boost_1_57_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\boost_1_57_0\boost_1_57_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdjectiveDlg.h" />
+    <ClInclude Include="Declension.h" />
+    <ClInclude Include="FileSelectDlg.h" />
+    <ClInclude Include="GrammarExample.h" />
+    <ClInclude Include="Verb.h" />
+    <ClInclude Include="VerbDlg.h" />
+    <ClInclude Include="NounDlg.h" />
+    <ClInclude Include="NounEntryTestDlg.h" />
+    <ClInclude Include="NounNamesDlg.h" />
+    <ClInclude Include="EnterDlg.h" />
+    <ClInclude Include="FileNamesDlg.h" />
+    <ClInclude Include="GreekEdit.h" />
+    <ClInclude Include="GreekVocab.h" />
+    <ClInclude Include="GreekVocabDoc.h" />
+    <ClInclude Include="GreekVocabException.h" />
+    <ClInclude Include="GreekVocabView.h" />
+    <ClInclude Include="HoverTest.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MDLListBox.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScrollListBox.h" />
+    <ClInclude Include="shifts.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="EntryTestDlg.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="VerbEntryTestDlg.h" />
+    <ClInclude Include="VerbNamesDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdjectiveDlg.cpp" />
+    <ClCompile Include="Declension.cpp" />
+    <ClCompile Include="FileSelectDlg.cpp" />
+    <ClCompile Include="Verb.cpp" />
+    <ClCompile Include="VerbDlg.cpp" />
+    <ClCompile Include="NounDlg.cpp" />
+    <ClCompile Include="NounEntryTestDlg.cpp" />
+    <ClCompile Include="NounNamesDlg.cpp" />
+    <ClCompile Include="EnterDlg.cpp" />
+    <ClCompile Include="FileNamesDlg.cpp" />
+    <ClCompile Include="GreekEdit.cpp" />
+    <ClCompile Include="GreekVocab.cpp" />
+    <ClCompile Include="GreekVocabDoc.cpp" />
+    <ClCompile Include="GreekVocabException.cpp" />
+    <ClCompile Include="GreekVocabView.cpp" />
+    <ClCompile Include="HoverTest.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MDLListBox.cpp" />
+    <ClCompile Include="ScrollListBox.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EntryTestDlg.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="VerbEntryTestDlg.cpp" />
+    <ClCompile Include="VerbNamesDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GreekVocab.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\SetupProject1\GreekVocab.wxs" />
+    <None Include="res\GreekVocab.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\GreekVocab.ico" />
+    <Image Include="res\GreekVocabDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="GreekVocab.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

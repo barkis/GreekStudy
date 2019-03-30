@@ -1,0 +1,6 @@
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\WixProject\bin\Debug\GreekVocab.msi
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\WixProject\bin\Debug\GreekVocab.wixpdb
+obj\Debug\GreekVocab.wixobj
+obj\Debug\WixProject.wixproj.BindContentsFileListnull.txt
+obj\Debug\WixProject.wixproj.BindOutputsFileListnull.txt
+obj\Debug\WixProject.wixproj.BindBuiltOutputsFileListnull.txt

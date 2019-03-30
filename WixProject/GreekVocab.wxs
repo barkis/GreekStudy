@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" UpgradeCode="37387F88-E6D8-435C-B8C4-72D1EB698FC8" Version="1.0.0.0" Language="1033" Name="GreekVocab" Manufacturer="MLeddy18a">
+    <Package InstallerVersion="405" Compressed="yes"/>
+    <Media Id="1" Cabinet="myapplication.cab" EmbedCab="yes"  />
+    <!-- Step 1: Define the directory structure -->
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="APPLICATIONROOTDIRECTORY" Name="GreekVocab">
+          <Directory Id="MAPDIR" Name="CharMaps" />
+          <Directory Id="HTMLDIR" Name="Html" />
+        </Directory>
+      </Directory>
+      <Directory Id="CommonAppDataFolder" Name="AppData">
+        <Directory Id="VOCABLISTS" Name="VocabLists" />
+      </Directory>
+    </Directory>
+
+
+    <!-- Step 2: Add files to your installer package -->
+    <DirectoryRef Id="APPLICATIONROOTDIRECTORY">
+      <Component Id="application.exe" Guid="DD31CD31-1510-46F5-940E-91C85D216398">
+        <File Id="GreekVocab.exe" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.exe" KeyPath="yes"/>
+      </Component>
+      <Component Id="help.chm" Guid="821932A8-A7D9-4EF5-A011-E253B9088BFA">
+        <File Id="help.chm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\GreekVocab.chm" KeyPath="yes"/>
+      </Component>
+      <!--		<Merge Id="MSVCRedist" DiskId="1" Language="0"
+				SourceFile="Microsoft_VC120_MFC_x86.msm"/>
+				<Merge Id="MSVCRedist2" DiskId="1" Language="0"
+				SourceFile="Microsoft_VC120_CRT_x86.msm"/>-->
+    </DirectoryRef>
+    <DirectoryRef Id="VOCABLISTS">
+      <Component Id="delcl3c.stx" Guid="43f87099-c464-4aee-af45-d620f35c911f">
+        <File Id="delcl3c.stx" Source="C:\ProgramData\vocablists\delcl3c.stx" KeyPath="yes"/>
+      </Component>
+      <Component Id="first.gkv" Guid="c72636f5-52c5-44a0-ad65-8af69b6f08a6">
+        <File Id="first.gkv" Source="C:\ProgramData\vocablists\first.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="give.stx" Guid="ba48d491-a619-442c-a280-3bd42ee16e81">
+        <File Id="give.stx" Source="C:\ProgramData\vocablists\give.stx" KeyPath="yes"/>
+      </Component>
+      <Component Id="Grama.stx" Guid="2e5a01eb-7a1a-4364-9485-17e026c9c975">
+        <File Id="Grama.stx" Source="C:\ProgramData\vocablists\Grama.stx" KeyPath="yes"/>
+      </Component>
+      <Component Id="second.gkv" Guid="8f4ad081-ab47-47d4-94f2-2c7d9cb76a5a">
+        <File Id="second.gkv" Source="C:\ProgramData\vocablists\second.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect1.gkv" Guid="51812f85-493c-4d82-bcd3-d161c16ab8ba">
+        <File Id="Sect1.gkv" Source="C:\ProgramData\vocablists\Sect1.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect2.gkv" Guid="bb07116c-031b-430a-a147-07ffc1689bad">
+        <File Id="Sect2.gkv" Source="C:\ProgramData\vocablists\Sect2.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect3.gkv" Guid="1a2e7968-0edf-435b-90ba-4a64577ee1ed">
+        <File Id="Sect3.gkv" Source="C:\ProgramData\vocablists\Sect3.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect4.gkv" Guid="3a280962-576e-4ffd-aeda-cbedd1088ae7">
+        <File Id="Sect4.gkv" Source="C:\ProgramData\vocablists\Sect4.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect5.gkv" Guid="3acb4687-bd2c-44c9-b830-bbfdf8057547">
+        <File Id="Sect5.gkv" Source="C:\ProgramData\vocablists\Sect5.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect6.gkv" Guid="ba0de19c-cdca-472f-8158-555f015cd1ff">
+        <File Id="Sect6.gkv" Source="C:\ProgramData\vocablists\Sect6.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect7.gkv" Guid="54fdff64-ac02-49f0-9222-1ad4e6317277">
+        <File Id="Sect7.gkv" Source="C:\ProgramData\vocablists\Sect7.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect8.gkv" Guid="c5825b81-96aa-4ed5-83da-351c9f6215a3">
+        <File Id="Sect8.gkv" Source="C:\ProgramData\vocablists\Sect8.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="Sect9.gkv" Guid="7b32187b-2d97-4106-84ee-9938a44065be">
+        <File Id="Sect9.gkv" Source="C:\ProgramData\vocablists\Sect9.gkv" KeyPath="yes"/>
+      </Component>
+      <Component Id="stop.stx" Guid="b751b81c-2592-4870-8417-a0ad00f52a5e">
+        <File Id="stop.stx" Source="C:\ProgramData\vocablists\stop.stx" KeyPath="yes"/>
+      </Component>
+      <Component Id="verb1.stx" Guid="f14c17fa-abfa-4243-b204-6461e20317bc">
+        <File Id="verb1.stx" Source="C:\ProgramData\vocablists\verb1.stx" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="HTMLDIR">
+      <Component Id="GreekEntry.htm" Guid="81319220-11a8-4a64-9ecf-ad2616d41472">
+        <File Id="GreekEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GreekEntry.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="NounEntry.htm" Guid="0a34a53c-8bc2-4d28-bcd8-865525cb3a99">
+        <File Id="NounEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\NounEntry.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="Opening.htm" Guid="c13f874a-1880-4341-8113-79c8df71abed">
+        <File Id="Opening.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\Opening.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="topics.htm" Guid="08593728-df56-4f4e-b428-c47e78d877ca">
+        <File Id="topics.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\topics.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="VocabularyEntry.htm" Guid="fd800394-f087-4eb7-b265-bab9df4f297d">
+        <File Id="VocabularyEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\VocabularyEntry.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="EntryTest.htm" Guid="BE4EA494-23A8-43EA-A614-99EAF92B0547">
+        <File Id="EntryTest.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\EntryTest.htm" KeyPath="yes"/>
+      </Component>
+      <Component Id="GV1.css" Guid="0506D319-7F25-46B6-A692-DD99DDBA3050">
+        <File Id="GV1.css" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GV1.css" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="MAPDIR">
+      <Component Id="charcodes" Guid="730F3352-0825-4BCA-BA82-6512BADAC91C">
+        <File Id="charcodes" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodes.en" Guid="CFDCB513-ED75-48BA-A228-E7A08C12992E">
+        <File Id="charcodes.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodes.gk" Guid="4FFF1A94-2CDA-4D3B-987E-14C0920BC40D">
+        <File Id="charcodes.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodes.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesalt.en" Guid="14837784-B2BF-4BFB-8A7F-4051F16D18A5">
+        <File Id="charcodesalt.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesalt.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesalt.gk" Guid="37B26469-B4EF-48D6-AA9F-A48BD8FF65D0">
+        <File Id="charcodesalt.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesalt.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesaltsmooth.en" Guid="A32780C2-9D4F-4AA2-8256-659C9F94CBCF">
+        <File Id="charcodesaltsmooth.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesaltsmooth.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesaltsmooth.gk" Guid="6C92EB10-4786-4272-9C6E-58DD22496E0F">
+        <File Id="charcodesaltsmooth.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesaltsmooth.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesiota.en" Guid="FA0A150E-8AD7-4009-BB30-080F79B875AD">
+        <File Id="charcodesiota.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiota.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesiota.gk" Guid="46C904D8-FC44-4D88-8961-5BE1B3EC996A">
+        <File Id="charcodesiota.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiota.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesiotasmooth.en" Guid="B135CAE7-E79D-4975-86D4-2CC97E2F9601">
+        <File Id="charcodesiotasmooth.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiotasmooth.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesiotasmooth.gk" Guid="5C3E2275-482A-4CF1-ADA7-F7B9F4CFAD65">
+        <File Id="charcodesiotasmooth.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesiotasmooth.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodessmooth.en" Guid="46B8DC60-8339-44DC-87F2-C556BC2000A1">
+        <File Id="charcodessmooth.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodessmooth.gk" Guid="D5C73DA3-293C-41E3-B7D2-4FD8149CED68">
+        <File Id="charcodessmooth.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.gk" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodessmooth.gk1" Guid="4E7BF104-B1B0-45E8-9B2E-84C86D922BED">
+        <File Id="charcodessmooth.gk1" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodessmooth.gk1" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesU.en" Guid="C1D94897-7E13-425A-B255-F7966BF7ACCC">
+        <File Id="charcodesU.en" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesU.en" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesU.GK" Guid="A2C0A508-73B0-466D-AB58-005EA9F978A2">
+        <File Id="charcodesU.GK" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesU.GK" KeyPath="yes"/>
+      </Component>
+      <Component Id="charcodesUsmooth.gk" Guid="829FC6E7-C2B4-4CF3-8C48-4ED797BBB912">
+        <File Id="charcodesUsmooth.gk" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\charmaps\charcodesUsmooth.gk" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+    <!--	<DirectoryRef Id="TARGETDIR">
+			<Merge Id="REDISTX86" Language="0" SourceFile="vcredist_x86.exe" DiskId="1" />
+		</DirectoryRef>-->
+    <!-- Step 3: Tell WiX to install the files -->
+    <Feature Id="MainApplication" Title="Main Application" Level="1">
+      <ComponentRef Id="application.exe" />
+      <ComponentRef Id="help.chm" />
+      <ComponentRef Id="charcodes" />
+      <ComponentRef Id="charcodes.en" />
+      <ComponentRef Id="charcodes.gk" />
+      <ComponentRef Id="charcodesalt.en" />
+      <ComponentRef Id="charcodesalt.gk" />
+      <ComponentRef Id="charcodesaltsmooth.en" />
+      <ComponentRef Id="charcodesaltsmooth.gk" />
+      <ComponentRef Id="charcodesiota.en" />
+      <ComponentRef Id="charcodesiota.gk" />
+      <ComponentRef Id="charcodesiotasmooth.en" />
+      <ComponentRef Id="charcodesiotasmooth.gk" />
+      <ComponentRef Id="charcodessmooth.en" />
+      <ComponentRef Id="charcodessmooth.gk" />
+      <ComponentRef Id="charcodessmooth.gk1" />
+      <ComponentRef Id="charcodesU.en" />
+      <ComponentRef Id="charcodesU.GK" />
+      <ComponentRef Id="charcodesUsmooth.gk" />
+      <ComponentRef Id="EntryTest.htm" />
+      <ComponentRef Id="GreekEntry.htm" />
+      <ComponentRef Id="NounEntry.htm" />
+      <ComponentRef Id="Opening.htm" />
+      <ComponentRef Id="topics.htm" />
+      <ComponentRef Id="VocabularyEntry.htm" />
+      <ComponentRef Id="GV1.css" />
+      <ComponentRef Id="delcl3c.stx" />
+      <ComponentRef Id="first.gkv" />
+      <ComponentRef Id="give.stx" />
+      <ComponentRef Id="Grama.stx" />
+      <ComponentRef Id="second.gkv" />
+      <ComponentRef Id="Sect1.gkv" />
+      <ComponentRef Id="Sect2.gkv" />
+      <ComponentRef Id="Sect3.gkv" />
+      <ComponentRef Id="Sect4.gkv" />
+      <ComponentRef Id="Sect5.gkv" />
+      <ComponentRef Id="Sect6.gkv" />
+      <ComponentRef Id="Sect7.gkv" />
+      <ComponentRef Id="Sect8.gkv" />
+      <ComponentRef Id="Sect9.gkv" />
+      <ComponentRef Id="stop.stx" />
+      <ComponentRef Id="verb1.stx" />
+      <!--<MergeRef Id="REDISTX86" />-->
+    </Feature>
+    <!--	<Feature Id="MSVCRedist" Title="Visual C++ 12.0 MFC Runtime" AllowAdvertise="no"  Level="1">
+			<MergeRef Id="MSVCRedist"/>
+				</Feature>	
+				<Feature Id="MSVCRedist2" Title="Visual C++ 8.0 CRT Runtime" AllowAdvertise="no"  Level="1">
+			<MergeRef Id="MSVCRedist2"/>
+		</Feature>-->
+  </Product>
+</Wix>
+

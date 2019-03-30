@@ -1,0 +1,2 @@
+#define IDH_OPENING	1001
+#define IDH_VOCABENTRY	1002

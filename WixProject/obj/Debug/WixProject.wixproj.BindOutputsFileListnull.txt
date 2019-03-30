@@ -1,0 +1,2 @@
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\WixProject\bin\Debug\GreekVocab.msi
+C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\WixProject\bin\Debug\GreekVocab.wixpdb

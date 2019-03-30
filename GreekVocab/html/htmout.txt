@@ -1,0 +1,18 @@
+<Component Id="GreekEntry.htm" Guid="81319220-11a8-4a64-9ecf-ad2616d41472">
+<File Id="GreekEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GreekEntry.htm" KeyPath="yes"/>
+</Component>
+<Component Id="GreekEntry2.htm" Guid="14c2640f-39a3-43d6-ac1c-d7273ca0fc73">
+<File Id="GreekEntry2.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\GreekEntry2.htm" KeyPath="yes"/>
+</Component>
+<Component Id="NounEntry.htm" Guid="0a34a53c-8bc2-4d28-bcd8-865525cb3a99">
+<File Id="NounEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\NounEntry.htm" KeyPath="yes"/>
+</Component>
+<Component Id="Opening.htm" Guid="c13f874a-1880-4341-8113-79c8df71abed">
+<File Id="Opening.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\Opening.htm" KeyPath="yes"/>
+</Component>
+<Component Id="topics.htm" Guid="08593728-df56-4f4e-b428-c47e78d877ca">
+<File Id="topics.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\topics.htm" KeyPath="yes"/>
+</Component>
+<Component Id="VocabularyEntry.htm" Guid="fd800394-f087-4eb7-b265-bab9df4f297d">
+<File Id="VocabularyEntry.htm" Source="C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\html\VocabularyEntry.htm" KeyPath="yes"/>
+</Component>

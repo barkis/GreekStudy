@@ -1,0 +1,40 @@
+﻿Build started 23/12/2015 08:10:09.
+     1>Project "C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\GreekVocab.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D _WINDOWS /D NDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\GreekVocab.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GreekVocabView.cpp
+         GreekVocabView.cpp
+     1>GreekVocabView.cpp(123): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.lib" /MACHINE:X86 /SAFESEH:NO Release\GreekVocab.res
+         Release\AdjectiveDlg.obj
+         Release\Declension.obj
+         Release\FileSelectDlg.obj
+         Release\Verb.obj
+         Release\VerbDlg.obj
+         Release\NounDlg.obj
+         Release\NounEntryTestDlg.obj
+         Release\NounNamesDlg.obj
+         Release\EnterDlg.obj
+         Release\FileNamesDlg.obj
+         Release\GreekEdit.obj
+         Release\GreekVocab.obj
+         Release\GreekVocabDoc.obj
+         Release\GreekVocabException.obj
+         Release\GreekVocabView.obj
+         Release\HoverTest.obj
+         Release\MainFrm.obj
+         Release\MDLListBox.obj
+         Release\ScrollListBox.obj
+         Release\stdafx.obj
+         Release\EntryTestDlg.obj
+         Release\util.obj
+         Release\VerbEntryTestDlg.obj
+         Release\VerbNamesDlg.obj
+         Generating code
+         Finished generating code
+         GreekVocab.vcxproj -> C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\Release\GreekVocab.exe
+     1>Done Building Project "C:\Users\Matthew\Documents\Visual Studio 2013\Projects\GreekVocab\GreekVocab\GreekVocab.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:49.51

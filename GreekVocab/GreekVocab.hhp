@@ -1,0 +1,28 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=GreekVocab.chm
+Contents file=Table of Contents.hhc
+Default Window=tripane
+Default topic=html\opening.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x809 English (United Kingdom)
+
+[WINDOWS]
+tripane=,"Table of Contents.hhc","Index.hhk","html\opening.htm",,,,,,0x22520,,0x3006,,,,,,,,0
+
+
+[FILES]
+Greek Entry
+
+[ALIAS]
+IDH_OPENING=html\opening.htm ; opening view window
+IDH_VOCABENTRY=html\vocabularyentry.htm
+
+[MAP]
+#include helpmap.h
+
+[INFOTYPES]
+

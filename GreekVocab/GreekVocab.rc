@@ -1,0 +1,707 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GreekVocab.ico"
+IDR_GreekVocabTYPE      ICON                    "res\\GreekVocabDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "Vocabulary"
+    BEGIN
+        MENUITEM "Enter/Edit\tCtrl+E",          ID_VOCABULARY_ENTRY
+        MENUITEM SEPARATOR
+        MENUITEM "Entry Test\tCtrl+T",          ID_VOCABULARY_ENTRYTEST
+        MENUITEM "Hover Test\tCtrl+H",          ID_VOCABULARY_HOVERTEST
+    END
+    POPUP "Nouns"
+    BEGIN
+        MENUITEM "Enter/Edit\tCtrl+N",          ID_GRAMMAR_NOUNS
+        MENUITEM "Entry Test\tCtrl+Y",          ID_NOUNS_ENTRYTEST
+    END
+    POPUP "&Adjectives"
+    BEGIN
+        MENUITEM "Enter/Edit\tCtrl-A",          ID_ADJECTIVES_ENTER
+    END
+    POPUP "Verbs"
+    BEGIN
+        MENUITEM "Enter/Edit\tCtrl-V",          ID_VERBS_ENTER
+        MENUITEM "Entry Test",                  ID_VERBS_ENTRYTEST
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_HELPTOPICS
+        MENUITEM "&About GreekVocab...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GreekVocab"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "GreekVocab, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "GreekVocab"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GreekVocab.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "GreekVocab.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "GreekVocab\n\nGreekVocab\n\n\nGreekVocab.Document\nGreekVocab.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "GreekVocab"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ENTER DIALOGEX 0, 0, 445, 197
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Enter Vocabulary"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDITGK,24,7,191,163,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_EDITEN,220,7,191,166,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "&Save",IDSAVE,122,176,50,14,WS_DISABLED | NOT WS_TABSTOP
+    PUSHBUTTON      "Close",IDCANCEL,275,176,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "Open Saved",IDC_BUTTONEDIT,45,176,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "New",IDNEW,202,176,50,14,WS_DISABLED | NOT WS_TABSTOP
+END
+
+IDD_ENTRYTEST DIALOGEX 0, 0, 393, 293
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Vocabulary Test"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDCLOSE,258,271,50,14
+    EDITTEXT        IDC_TRY,7,273,126,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_LISTGK,7,42,137,209,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBOFILES,9,23,82,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "File",IDC_STATIC,11,12,12,8
+    LISTBOX         IDC_LISTEN,167,42,137,209,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<- &Show Translation",IDC_BUTTONSHOW,142,273,83,12
+    LTEXT           "Enter translation",IDC_STATIC,7,262,118,8
+END
+
+IDD_DIALOGHOVERTEST DIALOGEX 0, 0, 591, 303
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hover Test"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,198,277,50,14
+    LISTBOX         IDC_LISTHOVER,7,22,398,240,LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBOHOVER,7,7,103,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOGFILENAMES DIALOGEX 0, 0, 148, 152
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Select File"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,131,44,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,131,44,14
+    LISTBOX         IDC_LISTFILENAMES,7,7,141,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOGNOUN DIALOGEX 0, 0, 335, 236
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Noun Paradigm"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDITDECLENSION,67,7,104,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBOARTICLE,52,22,19,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDITDICTIONARYFORM,75,22,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOUNTRANS,68,40,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMS,84,64,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCS,84,79,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENS,84,94,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATS,85,110,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMP,85,134,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCP,86,151,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENP,87,167,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATP,88,184,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITVOC,100,201,104,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Save and Close",IDSAVE,0,220,59,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDCANCEL,265,220,50,14
+    LTEXT           "Dictionary\nForm",IDC_STATIC,12,22,36,17
+    LTEXT           "Declension",IDC_STATICDECLENSION,15,7,40,8
+    LTEXT           "Singular",IDC_STATIC,9,54,40,8
+    LTEXT           "Nominative",IDC_STATIC,28,65,40,8
+    LTEXT           "Accusative",IDC_STATIC,27,81,40,8
+    LTEXT           "Genitive",IDC_STATIC,28,96,40,8
+    LTEXT           "Plural",IDC_STATIC,9,126,40,8
+    LTEXT           "Nominative",IDC_STATIC,32,136,40,8
+    LTEXT           "Accusative",IDC_STATIC,32,153,40,8
+    LTEXT           "Genitive",IDC_STATIC,32,169,40,8
+    LTEXT           "Vocative",IDC_STATIC,19,203,40,8
+    LTEXT           "Dative",IDC_STATIC,28,112,40,8
+    LTEXT           "Dative",IDC_STATIC,32,186,40,8
+    DEFPUSHBUTTON   "&Save and Con&tinue",IDBUTTONSAVEANDCONTINUE,62,220,67,14,WS_DISABLED
+    DEFPUSHBUTTON   "C&lear",IDBUTTONCLEAR,133,220,59,14,WS_DISABLED
+    DEFPUSHBUTTON   "&Edit",IDBUTTONEDIT,196,220,59,14
+    LTEXT           "Translation",IDC_STATIC,12,43,40,11
+END
+
+IDD_DIALOGNOUNNAMES DIALOGEX 0, 0, 148, 152
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Select File"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,131,44,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,131,44,14
+    LISTBOX         IDC_LISTNOUNNAMES,7,7,141,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOGADJECTIVE DIALOGEX 0, 0, 378, 303
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Adjective Paradigm"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDITDECLENSION,67,7,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDICTIONARYFORM,66,24,104,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMSM,74,73,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCSM,74,94,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENSM,74,115,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATSM,74,136,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMPM,74,177,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCPM,74,198,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENPM,74,219,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATPM,74,240,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITVOCM,87,261,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMSF,150,73,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCSF,150,94,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENSF,150,115,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATSF,150,136,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMPF,150,177,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCPF,150,198,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENPF,150,219,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATPF,150,240,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMSN,238,72,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCSN,238,93,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENSN,238,114,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATSN,238,135,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNOMPN,238,176,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITACCPN,238,197,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITGENPN,238,218,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDATPN,238,239,53,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Save and Close",IDBUTTONSAVE,10,283,59,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDCANCEL,286,283,50,14
+    LTEXT           "Dictionary\nForm",IDC_STATIC,16,23,40,24
+    LTEXT           "Declension",IDC_STATICDECLENSION,15,7,40,8
+    LTEXT           "Singular",IDC_STATIC,11,58,40,8
+    LTEXT           "Neuter",IDC_STATIC,246,56,40,8
+    LTEXT           "Accusative",IDC_STATIC,32,95,40,8
+    LTEXT           "Genitive",IDC_STATIC,32,116,40,8
+    LTEXT           "Plural",IDC_STATIC,11,162,40,8
+    LTEXT           "Nominative",IDC_STATIC,32,178,40,8
+    LTEXT           "Accusative",IDC_STATIC,32,199,40,8
+    LTEXT           "Genitive",IDC_STATIC,32,220,40,8
+    LTEXT           "Vocative",IDC_STATIC,19,262,40,8
+    LTEXT           "Dative",IDC_STATIC,32,137,40,8
+    LTEXT           "Dative",IDC_STATIC,32,241,40,8
+    DEFPUSHBUTTON   "&Save and Con&tinue",IDBUTTONSAVEANDCONTINUE,77,283,67,14,WS_DISABLED
+    DEFPUSHBUTTON   "C&lear",IDBUTTONCLEAR,152,283,59,14,WS_DISABLED
+    DEFPUSHBUTTON   "&Edit",IDBUTTONEDIT,219,283,59,14
+    LTEXT           "Masculine",IDC_STATIC,80,56,40,8
+    LTEXT           "Feminine",IDC_STATIC,153,56,40,8
+    LTEXT           "Nominative",IDC_STATIC,32,75,40,8
+    EDITTEXT        IDC_EDITTRANSLATION,224,23,104,12,ES_AUTOHSCROLL
+    LTEXT           "Translation",IDC_STATIC,183,24,40,11
+END
+
+IDD_DIALOGVERB DIALOGEX 0, 0, 376, 245
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Verb"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDITCONJUGATION,73,7,77,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDICTIONARYFORM,248,7,104,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS1S,70,75,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS2S,70,95,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS3S,70,115,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS1P,70,151,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS2P,70,171,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPERS3P,70,190,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITINF,229,75,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITPART,229,111,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITIMPS,232,156,130,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITIMPP,232,172,130,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Save ",IDBUTTONSAVE,85,211,59,14,WS_DISABLED
+    DEFPUSHBUTTON   "New",IDBUTTONNEW,152,210,67,14,WS_DISABLED
+    DEFPUSHBUTTON   "Open Saved",IDBUTTONEDIT,15,211,59,14
+    PUSHBUTTON      "Close",IDCANCEL,229,211,50,14
+    CONTROL         "",IDC_TABVERB,"SysTabControl32",TCS_MULTILINE | WS_BORDER,7,32,362,24
+    LTEXT           "Singular",IDC_STATIC,20,58,27,8
+    LTEXT           "1st Person",IDC_STATIC,28,77,35,8
+    LTEXT           "2nd Person",IDC_STATIC,28,95,37,8
+    LTEXT           "3rd Person",IDC_STATIC,28,115,35,8
+    LTEXT           "Plural",IDC_STATIC,19,140,18,8
+    LTEXT           "1st Person",IDC_STATIC,28,153,35,8
+    LTEXT           "2nd Person",IDC_STATIC,28,171,37,8
+    LTEXT           "3rd Person",IDC_STATIC,28,191,35,8
+    LTEXT           "Conjugation Name",IDC_STATIC,7,7,61,8
+    LTEXT           "Infinitive",IDC_STATICINF,229,63,29,8
+    LTEXT           "Imperative",IDC_STATICIMP,232,143,35,8
+    LTEXT           "Participle",IDC_STATICPART,229,96,29,8
+    LTEXT           "Dictionary Form",IDC_STATIC,189,7,55,8
+    EDITTEXT        IDC_EDITTRANSLATION,73,20,77,10,ES_AUTOHSCROLL
+    LTEXT           "Translation",IDC_STATIC,7,20,61,8
+END
+
+IDD_DIALOGVERBNAMES DIALOGEX 0, 0, 148, 152
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Select File"
+FONT 12, "Tahoma", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,131,44,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,131,44,14
+    LISTBOX         IDC_LISTVERBNAMES,7,7,141,114,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FILEDIALOGUE DIALOGEX 0, 0, 240, 236
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select File"
+FONT 12, "Times New Roman", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,24,208,74,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,208,74,14
+    LISTBOX         IDC_LISTFILES,19,7,210,162,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDITFILENAME,25,192,89,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITEXTENSION,155,192,72,13,ES_AUTOHSCROLL
+    LTEXT           "File Name",IDC_STATIC,25,181,29,8
+    LTEXT           "File Type",IDC_STATIC,155,181,26,8
+END
+
+IDD_VERBENTRYTESTDLG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,209,179,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,179,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ENTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 438
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_ENTRYTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 378
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 286
+    END
+
+    IDD_DIALOGHOVERTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 584
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 296
+    END
+
+    IDD_DIALOGFILENAMES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_DIALOGNOUN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 323
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DIALOGNOUNNAMES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_DIALOGADJECTIVE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 343
+    END
+
+    IDD_DIALOGVERB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 369
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_DIALOGVERBNAMES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_FILEDIALOGUE, DIALOG
+    BEGIN
+    END
+
+    IDD_VERBENTRYTESTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\GreekVocab.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#include ""afxprint.rc""    // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "A",            ID_ADJECTIVES_ENTER,    VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_GRAMMAR_NOUNS,       VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_NOUNS_ENTRYTEST,     VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_VOCABULARY_ENTRY,    VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_VOCABULARY_ENTRYTEST, VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_VOCABULARY_HOVERTEST, VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_VERBS_ENTER,         VIRTKEY, CONTROL, NOINVERT
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\GreekVocab.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#include "afxprint.rc"    // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

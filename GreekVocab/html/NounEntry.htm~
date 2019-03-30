@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<link href="GV1.css" rel="stylesheet" type="text/css" />
+<Title>NounEntry</Title>
+</HEAD>
+<BODY><Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="Declensions">
+	<param name="Keyword" value="Nouns">
+</OBJECT>
+<Title class="centre">Noun entry</Title>
+</HEAD>
+<BODY>
+<div class="indent">
+<h1>Entering Nouns</h1>
+The Enter/Edit option on the Nouns menu brings up a new window. 
+<p>
+In this you can enter the declension of an example noun. For "Declension" enter a unique identifier for this type of noun. "Dictionary Form" is usually the nominative singular.
+</p>
+<p>
+The entry boxes other than those for "Declension" and "Translation" are set to interpret entry as Greek letters using the <a href=GreekEntry.htm>Greek keyboard mapping</a>
+</p>
+<p>
+To edit a previously saved file click on <i>Open Saved</i>
+</p>
+</div>
+
+</BODY>
+</HTML>

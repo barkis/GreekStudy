@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<Title>Greek Entry</Title>
+<link href="GV1.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY>
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="accents (not supported)">
+	<param name="Keyword" value="Breathings">
+	<param name="Keyword" value="Greek alphabet">
+	<param name="Keyword" value="Greek entry">
+	<param name="Keyword" value="iota subscript">
+</OBJECT>
+<h1 class="centre">Entering Greek</h1>
+<p>
+<div class="indent">
+This program uses an English keyboard setting for entering Greek. The letters are mapped as follows:
+
+Where a Greek letter has an English equivalent just type the English letter. For this purpose 'f' is equivalent to phi.
+<br /><br />
+<table  >
+	<tr >
+		<td  >
+			<p>a</p>
+		</td>
+		<td  >
+			<p>&alpha;</p>
+		</td>
+		<td class="tdmid" rowspan="10"></td>
+		<td  >
+			<p>n</p>
+		</td>
+		<td  >
+			<p>&nu;</p>
+		</td>
+	</tr>
+	<tr >
+
+		<td  >
+			<p>b</p>
+		</td>
+		<td  >
+			<p>&beta;</p>
+		</td>
+
+		<td  >
+			<p>x</p>
+		</td>
+		<td  >
+			<p>&xi;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>g</p>
+		</td>
+		<td  >
+			<p>&gamma;</p>
+		</td>
+		<td  >
+			<p>o</p>
+		</td>
+		<td  >
+			<p>&omicron;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>d</p>
+		</td>
+		<td  >
+			<p>&delta;</p>
+		</td>
+		<td  >
+			<p>p</p>
+		</td>
+		<td  >
+			<p>&pi;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>e</p>
+		</td>
+		<td  >
+			<p>&epsilon;</p>
+		</td>
+		<td  >
+			<p>r</p>
+		</td>
+		<td  >
+			<p>&rho;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>z</p>
+		</td>
+		<td  >
+			<p>&zeta;</p>
+		</td>
+		<td  >
+			<p>s</p>
+		</td>
+		<td  >
+			<p>&sigma;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>i</p>
+		</td>
+		<td  >
+			<p>&iota;</p>
+		</td>
+		<td  >
+			<p>t</p>
+		</td>
+		<td  >
+			<p>&tau;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>k</p>
+		</td>
+		<td  >
+			<p>&kappa;</p>
+		</td>
+		<td  >
+			<p>u</p>
+		</td>
+		<td  >
+			<p>&upsilon;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>l</p>
+		</td>
+		<td  >
+			<p>&lambda;</p>
+		</td>
+		<td  >
+			<p>f</p>
+		</td>
+		<td  >
+			<p>&phi;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>m</p>
+		</td>
+		<td  >
+			<p>&mu;</p>
+		</td>
+	</tr>
+</table>
+
+<p>
+For capitals use the Caps and Caps Lock keys as usual.
+<p>
+Other letters are entered using the left-hand Alt key as follows:
+
+</p>
+<table  cellpadding="4" cellspacing="0" >
+	<col width="128*">
+	<col width="128*">
+	<tr >
+		<td  >
+			<p>Alt-e</p>
+		</td>
+		<td  >
+			<p>&eta;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>Alt-k</p>
+		</td>
+		<td  >
+			<p>&chi;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>Alt-o</p>
+		</td>
+		<td  >
+			<p>&omega;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>Alt-p</p>
+		</td>
+		<td  >
+			<p>&psi;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>Alt-t</p>
+		</td>
+		<td  >
+			<p>&theta;</p>
+		</td>
+	</tr>
+	<tr >
+		<td  >
+			<p>Alt-s</p>
+		</td>
+		<td  >
+			<p>&sigmaf;</p>
+		</td>
+	</tr>
+</table>
+<p>
+If a normal sigma is placed at the end of a word it will be corrected to a final sigma.
+<p>
+For a smooth breathing hold down 'v' while pressing the vowel/rho key or key combination. For a rough breathing hold down 'c'.
+<p>
+For iota subscript hold down the right-hand alt key ("alt gr"). As iota subscripts only apply to long vowels there is no need to press alt for eta or omega when using an iota subscript.
+</p>
+<p>
+Accents are not supported.
+</p>
+</div>
+</BODY>
+</HTML>
