@@ -8,7 +8,7 @@
 #ifndef SHARED_HANDLERS
 #include "GreekVocab.h"
 #endif
-#include <vld.h>
+
 #include "GreekVocabDoc.h"
 #include "GreekVocabView.h"
 #include "MainFrm.h"
