@@ -43,7 +43,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+<<<<<<< HEAD
     <IncludePath>C:\Program Files %28x86%29\HTML Help Workshop\include;D:\boost_1_76_0;D:\progs\VisualLeakDetector\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+=======
+    <IncludePath>C:\Program Files %28x86%29\HTML Help Workshop\include;D:\boost_1_76_0;$(IncludePath)</IncludePath>
+>>>>>>> 5d9b66c7416741a99b4502d6239cf43436640dd0
     <LibraryPath>C:\boost_1_57_0\boost_1_57_0\stage\lib;C:\Program Files %28x86%29\HTML Help Workshop\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

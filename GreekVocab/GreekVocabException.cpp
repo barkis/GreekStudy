@@ -16,7 +16,11 @@ const CString CVocabException::tcwhat() const {
 	std::basic_string<TCHAR> sRetVal(ssRetVal.str());
 	CString strFullText = ssRetVal.str().c_str();
 	std::ofstream outfile(_T("\\\vocablists\\err.txt"));
+<<<<<<< HEAD
 	outfile << "code "<<code<<"File: " << __FILE__<<" Line: "<<__LINE__;
+=======
+	outfile << "code "<<code<<"File: "<< __FILE__<<" Line: "<<__LINE__;
+>>>>>>> 5d9b66c7416741a99b4502d6239cf43436640dd0
 	outfile <<": message "<<text;
 	//AfxMessageBox(text);
 	outfile.close();
