@@ -39,10 +39,14 @@ private:
 //xxx	static const int COLWIDTH = 500;
 	static const int COLGAP = 25;
 	static const int YSTART = 3;
+	static const int STATUSTOP = 30;
+	static const int STATUSHEIGHT = 30;
+
 	std::vector<std::basic_string<TCHAR>> m_vEntries;
 	std::vector<int> m_vLinesToDraw;
 	std::vector<int> m_vColumnStartsGk, m_vColumnStartsEn;
 	std::vector<int> m_vColumnLengths;
+	CStatic* m_plblStatus;
 	int m_xPos,m_yPos;
 	int m_Columns;
 	int m_PerColumn;
@@ -68,6 +72,7 @@ public:
 	afx_msg void OnVerbsEnter();
 	afx_msg void OnVerbsEntrytest();
 	afx_msg void OnSize(UINT nType, int cx, int cy);
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 };
 
 #ifndef _DEBUG  // debug version in GreekVocabView.cpp

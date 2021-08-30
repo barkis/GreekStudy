@@ -1,4 +1,4 @@
-// VerbEntryTestDlg.cpp : implementation file
+﻿// VerbEntryTestDlg.cpp : implementation file
 //
 
 #include "stdafx.h"
@@ -149,24 +149,29 @@ void CVerbEntryTestDlg::OnSelchangeComboConjugation()	{
 		CGreekVocabDoc *pDoc = GetDocument();
 		m_pTheVerb = pDoc->GetVerb(strSelectedName);
 		m_strDictionaryForm = m_pTheVerb->m_strDictionaryForm;
-		m_pCurrentVerbForm = m_pTheVerb->m_pPresentActive;
-		m_mapTranslations.clear();
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS1S, m_pCurrentVerbForm->m_strPers1S));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS2S, m_pCurrentVerbForm->m_strPers2S));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS3S, m_pCurrentVerbForm->m_strPers3S));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS1P, m_pCurrentVerbForm->m_strPers1P));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS2P, m_pCurrentVerbForm->m_strPers2P));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPERS3P, m_pCurrentVerbForm->m_strPers3P));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITINF, m_pCurrentVerbForm->m_strInfinitive));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITPART, m_pCurrentVerbForm->m_strParticiple));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITIMPS, m_pCurrentVerbForm->m_strImperativeS));
-		m_mapTranslations.insert(std::make_pair(IDC_EDITIMPP, m_pCurrentVerbForm->m_strImperativeP));
+	//	m_pCurrentVerbForm = m_pTheVerb->m_pPresentActive;
+		SetVerbForm();
+		SetTranslations();
 		m_edtPers1S.SetFocus();
+
 //		EnableTextBoxes(true);
 	}
 	UpdateData(FALSE);
 }
 
+void CVerbEntryTestDlg::SetTranslations() {
+	m_mapTranslations.clear();
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS1S, m_pCurrentVerbForm->m_strPers1S));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS2S, m_pCurrentVerbForm->m_strPers2S));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS3S, m_pCurrentVerbForm->m_strPers3S));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS1P, m_pCurrentVerbForm->m_strPers1P));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS2P, m_pCurrentVerbForm->m_strPers2P));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS3P, m_pCurrentVerbForm->m_strPers3P));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITINF, m_pCurrentVerbForm->m_strInfinitive));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITPART, m_pCurrentVerbForm->m_strParticiple));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITIMPS, m_pCurrentVerbForm->m_strImperativeS));
+	m_mapTranslations.insert(std::make_pair(IDC_EDITIMPP, m_pCurrentVerbForm->m_strImperativeP));
+}
 /*
 	Remove any text from all the edit boxes
 */
@@ -218,9 +223,20 @@ void CVerbEntryTestDlg::OnChangeEditRange(UINT ID)
 		}
 		CString strTry;
 		pGreekEdit->GetWindowText(strTry);
+		CString strSigmaTermTry = strTry;
 		strTry.MakeLower();
-		if (strTranslation == strTry)	{
+		if (strSigmaTermTry.Right(1) == _T("σ")) {
+			strSigmaTermTry = strSigmaTermTry.Left(strSigmaTermTry.GetLength() - 1) + _T("ς");
+		}
+		if (strTry.Right(2) == _T("σ ")) {
+			strTry = strSigmaTermTry.Left(strSigmaTermTry.GetLength() - 2) + _T("ς ");
+			pGreekEdit->SetWindowText((LPCTSTR)strTry);
+		}
+		if (strTranslation == strTry || strTranslation == strSigmaTermTry)	{
 			m_TextColor = m_Black;
+			if (strTry != strTranslation) {
+				pGreekEdit->SetWindowText((LPCTSTR)strSigmaTermTry);
+			}
 		}
 		else	{
 			if (strTranslation.Find(strTry) == 0)	{	//matches so far
@@ -284,13 +300,36 @@ void CVerbEntryTestDlg::OnFocusEditRange(UINT ID)	{
 	Update the data in the current verb form of the verb object and switch to the selected verb form
 */
 void CVerbEntryTestDlg::OnTcnSelchangeTabverb(NMHDR *pNMHDR, LRESULT *pResult)	{
-	//ClearEditBoxes();
+	ClearEditBoxes();
 	UpdateData(TRUE);
 	CVerbDlg::OnTcnSelchangeTabverb(pNMHDR, pResult);
 	SetVerbForm();
+	SetTranslations();
 }
 
 void CVerbEntryTestDlg::SetVerbForm()	{
+
+	int iCurSel = m_TabSheet.GetCurSel();
+	m_Selection = m_aTabs[iCurSel];
+	switch (m_Selection)	{
+	case PRESACT: m_pCurrentVerbForm = m_pTheVerb->m_pPresentActive;
+		break;
+	case PRESMID: m_pCurrentVerbForm = m_pTheVerb->m_pPresentMiddle;
+		break;
+	case IMPACT: m_pCurrentVerbForm = m_pTheVerb->m_pImperfectActive;
+		break;
+	case IMPMID: m_pCurrentVerbForm = m_pTheVerb->m_pImperfectMiddle;
+		break;
+	case FUTACT: m_pCurrentVerbForm = m_pTheVerb->m_pFutureActive;
+		break;
+	case FUTMID: m_pCurrentVerbForm = m_pTheVerb->m_pFutureMiddle;
+		break;
+	case AORACT: m_pCurrentVerbForm = m_pTheVerb->m_pAoristActive;
+		break;
+	case AORMID: m_pCurrentVerbForm = m_pTheVerb->m_pAoristMiddle;
+		break;
+	}
+	UpdateData(FALSE);
 	m_mapTranslations.clear();
 	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS1S, m_pCurrentVerbForm->m_strPers1S));
 	m_mapTranslations.insert(std::make_pair(IDC_EDITPERS2S, m_pCurrentVerbForm->m_strPers2S));
@@ -303,27 +342,5 @@ void CVerbEntryTestDlg::SetVerbForm()	{
 	m_mapTranslations.insert(std::make_pair(IDC_EDITIMPS, m_pCurrentVerbForm->m_strImperativeS));
 	m_mapTranslations.insert(std::make_pair(IDC_EDITIMPP, m_pCurrentVerbForm->m_strImperativeP));
 	m_edtPers1S.SetFocus();
-
-	int iCurSel = m_TabSheet.GetCurSel();
-	m_Selection = m_aTabs[iCurSel];
-	switch (m_Selection)	{
-	case PRESACT: m_pCurrentVerbForm = m_pNewVerb->m_pPresentActive;
-		break;
-	case PRESMID: m_pCurrentVerbForm = m_pNewVerb->m_pPresentMiddle;
-		break;
-	case IMPACT: m_pCurrentVerbForm = m_pNewVerb->m_pImperfectActive;
-		break;
-	case IMPMID: m_pCurrentVerbForm = m_pNewVerb->m_pImperfectMiddle;
-		break;
-	case FUTACT: m_pCurrentVerbForm = m_pNewVerb->m_pFutureActive;
-		break;
-	case FUTMID: m_pCurrentVerbForm = m_pNewVerb->m_pFutureMiddle;
-		break;
-	case AORACT: m_pCurrentVerbForm = m_pNewVerb->m_pAoristActive;
-		break;
-	case AORMID: m_pCurrentVerbForm = m_pNewVerb->m_pAoristMiddle;
-		break;
-	}
-	UpdateData(FALSE);
 
 }

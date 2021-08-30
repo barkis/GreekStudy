@@ -114,7 +114,6 @@ bool CMainFrame::GetChar(Shifts shift,int charin,int &charout)	{
 void CMainFrame::OnHelpHelptopics()
 {
 		HWND hWndHelp =   ::HtmlHelp(0,
-            //_T("C:\\Users\\Matthew\\Documents\\Visual Studio 2012\\Projects\\GreekVocab\\greekvocab.chm"),
             _T("greekvocab.chm"),
             HH_DISPLAY_TOC,
             NULL) ;	

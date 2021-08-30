@@ -111,8 +111,8 @@ void CGreekEdit::Sigmify()	{
 	std::wstring sReplaced;
 	std::wregex toMatch(_T("(σ)([\\s]|$)"));	//normal sigma at end of word or string
 
-	int iChars = GetLine(0,szLine,500);
-	szLine[iChars] = '\0';
+	//int iChars = GetLine(0,szLine,500);
+	//szLine[iChars] = '\0';
 	if(!m_bIsMultiline)	{
 		iLineCount = 1;
 	}

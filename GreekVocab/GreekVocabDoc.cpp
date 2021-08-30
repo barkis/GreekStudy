@@ -326,36 +326,43 @@ IMPLEMENT_DYNCREATE(CGreekVocabDoc, CDocument)
 		Reader: pointer to CGreekVocabDoc::ReadVocabList() orCGreekVocabDoc::ReadSyntaxList()
 	*/
 	void CGreekVocabDoc::LoadLists(CString strFileTemplate,pReadMethod Reader)	{
-		WIN32_FIND_DATA FindStruct;
-		bool bFileFound = true;
-		//const std::basic_string<TCHAR> sPath(PATH);
-		std::basic_string<TCHAR> sFullName = m_sPath + _T("\\vocablists\\") + (LPCTSTR)strFileTemplate;
+		try {
+			WIN32_FIND_DATA FindStruct;
+			bool bFileFound = true;
+			//const std::basic_string<TCHAR> sPath(PATH);
+			std::basic_string<TCHAR> sFullName = m_sPath + _T("\\vocablists\\") + (LPCTSTR)strFileTemplate;
 
-		HANDLE hFile = FindFirstFile(sFullName.c_str(),&FindStruct);
-		if(hFile == INVALID_HANDLE_VALUE)	{
-			int iErr = GetLastError();
-			if (iErr == ERROR_FILE_NOT_FOUND || iErr == ERROR_PATH_NOT_FOUND)	{
+			HANDLE hFile = FindFirstFile(sFullName.c_str(), &FindStruct);
+			if (hFile == INVALID_HANDLE_VALUE) {
+				int iErr = GetLastError();
+				//if (iErr == ERROR_FILE_NOT_FOUND || iErr == ERROR_PATH_NOT_FOUND)	{
 				bFileFound = false;
+				//}
+				//else	{
+				throw CVocabException(_T("FindFirstFile failed"), iErr);
+				//}
 			}
-			else	{
-				throw CVocabException(_T("FindFirstFile failed"),iErr);
+			while (bFileFound) {
+				CString strFileName = m_sPath.c_str();
+				strFileName += _T("\\vocablists\\");
+				strFileName += (LPCTSTR)FindStruct.cFileName;
+				(this->*Reader)(strFileName);
+				if (!FindNextFile(hFile, &FindStruct)) {
+					int iErr = GetLastError();
+					if (iErr == ERROR_NO_MORE_FILES) {
+						bFileFound = false;
+					}
+					else {
+						int iErr = GetLastError();
+						throw CVocabException(_T("FindNextFile failed in LoadLists"), iErr);
+					}
+
+				}
 			}
 		}
-		while(bFileFound)	{
-			CString strFileName = m_sPath.c_str();
-			strFileName += _T("\\vocablists\\");
-			strFileName += (LPCTSTR)FindStruct.cFileName;
-			(this->* Reader)(strFileName);
-			if(! FindNextFile(hFile,&FindStruct))	{
-				int iErr = GetLastError();
-				if(iErr == ERROR_NO_MORE_FILES)	{
-					bFileFound = false;
-				}
-				else	{
-					throw CVocabException(_T("FindNextFile failed in LoadLists"),iErr);
-				}
-
-			}
+		catch (CVocabException& ex) {
+			AfxMessageBox(ex.tcwhat());
+			//PostQuitMessage(-1);
 		}
 
 	}

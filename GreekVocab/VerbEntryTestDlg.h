@@ -37,6 +37,7 @@ public:
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 	afx_msg void OnSelchangeComboConjugation();
+	void SetTranslations();
 	afx_msg void OnChangeEditRange(UINT ID);
 	afx_msg void OnFocusEditRange(UINT ID);
 	afx_msg void OnTcnSelchangeTabverb(NMHDR *pNMHDR, LRESULT *pResult);

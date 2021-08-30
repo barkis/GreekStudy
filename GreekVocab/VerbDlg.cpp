@@ -92,7 +92,11 @@ void CVerbDlg::OnTcnSelchangeTabverb(NMHDR *pNMHDR, LRESULT *pResult)
 	switch (m_Selection)	{
 	case PRESACT: m_pCurrentVerbForm = m_pTheVerb->m_pPresentActive;
 		break;
+	case PRESACTOPT: m_pCurrentVerbForm = m_pTheVerb->m_pPresentActiveOpt;
+		break;
 	case PRESMID: m_pCurrentVerbForm = m_pTheVerb->m_pPresentMiddle;
+		break;
+	case PRESMIDOPT: m_pCurrentVerbForm = m_pTheVerb->m_pPresentMiddleOpt;
 		break;
 	case PRESACTSUBJ: m_pCurrentVerbForm = m_pTheVerb->m_pPresentActiveSubj;
 		break;

@@ -1,14 +1,14 @@
 
 // GreekVocabView.cpp : implementation of the CGreekVocabView class
 //
-
+#include <vld.h>
 #include "stdafx.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
 // and search filter handlers and allows sharing of document code with that project.
 #ifndef SHARED_HANDLERS
 #include "GreekVocab.h"
 #endif
-#include <vld.h>
+
 #include "GreekVocabDoc.h"
 #include "GreekVocabView.h"
 #include "MainFrm.h"
@@ -48,11 +48,12 @@ BEGIN_MESSAGE_MAP(CGreekVocabView, CScrollView)
 	ON_COMMAND(ID_VERBS_ENTER, &CGreekVocabView::OnVerbsEnter)
 	ON_COMMAND(ID_VERBS_ENTRYTEST, &CGreekVocabView::OnVerbsEntrytest)
 	ON_WM_SIZE()
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 
 // CGreekVocabView construction/destruction
 
-CGreekVocabView::CGreekVocabView() :m_pDlg(NULL)
+CGreekVocabView::CGreekVocabView() :m_pDlg(NULL), m_plblStatus(nullptr)
 {
 }
 
@@ -72,7 +73,7 @@ void CGreekVocabView::OnDraw(CDC* pDC)
 {
 	CGreekVocabDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
-	if (!pDoc)	{
+	if (!pDoc) {
 		return;
 
 	}
@@ -80,13 +81,13 @@ void CGreekVocabView::OnDraw(CDC* pDC)
 	//Display fullvocabulary list in columns
 	RECT clientRect;
 	GetClientRect(&clientRect);
-	int iWindoweight = clientRect.bottom;
+	int iWindoweight = clientRect.bottom - STATUSHEIGHT;
 	int iWindowWidth = clientRect.right;
 
 	pDC->SetMapMode(MM_TEXT);
 	pDC->SetTextColor(RGB(0, 0, 255));
 	CFont fontTahoma;
-	if (!fontTahoma.CreatePointFont(120, _T("Tahoma")))	{
+	if (!fontTahoma.CreatePointFont(120, _T("Tahoma"))) {
 		throw CVocabException(_T("Failed to create font in view OnDraw"));
 	}
 	CFont* pFontOld = pDC->SelectObject(&fontTahoma);
@@ -98,22 +99,22 @@ void CGreekVocabView::OnDraw(CDC* pDC)
 	//m_xPos = m_vColumnStartsGk[iColNo];
 	int iEnStart = m_vColumnStartsEn[iColNo];
 	int iLineMax = m_vColumnLengths[iColNo];
-	for (std::basic_string<TCHAR> sLine : m_vEntries)	{
+	for (std::basic_string<TCHAR> sLine : m_vEntries) {
 		//split on the tab
 		std::string::size_type tabPos = sLine.find('\t');
 		std::basic_string<TCHAR> sGreek = sLine.substr(0, tabPos);
 		std::basic_string<TCHAR> sEn = sLine.substr(tabPos + 1);
-		if (!pDC->TextOut(m_xPos, m_yPos, sGreek.c_str(), sGreek.size()))	{
+		if (!pDC->TextOut(m_xPos, m_yPos, sGreek.c_str(), sGreek.size())) {
 			throw CVocabException(_T("TextOut(sGreek) failed"));
 		}
-		if (!pDC->TextOutW(iEnStart, m_yPos, sEn.c_str(), sEn.size()))	{
+		if (!pDC->TextOutW(iEnStart, m_yPos, sEn.c_str(), sEn.size())) {
 			throw CVocabException(_T("TextOut(sEn) failed"));
 		}
 		int iEnSize = sEn.size();
 		const char* szEn = (const char*)sEn.data();
 		CSize textSize = pDC->GetTextExtent((LPCTSTR)szEn, sLine.size());
 		m_yPos += textSize.cy + 2;
-		if (iLineCount++ == iLineMax)	{
+		if (iLineCount++ == iLineMax) {
 			iMaxBottom = m_yPos;
 			m_yPos = YSTART;
 			m_xPos = m_vColumnStartsGk[++iColNo];
@@ -195,17 +196,24 @@ void CGreekVocabView::OnVocabularyEntry()
 void CGreekVocabView::OnInitialUpdate()
 {
 	CScrollView::OnInitialUpdate();
+	m_plblStatus = new CStatic();
+	CRect clientRect;
+	GetClientRect(&clientRect);
+	CRect statusRect(clientRect.left, clientRect.bottom - STATUSTOP, clientRect.right, 
+		clientRect.bottom - STATUSTOP + STATUSHEIGHT);
+	m_plblStatus->Create(L"Status", SS_SUNKEN | WS_CHILD | WS_VISIBLE, statusRect, this, IDC_STATICSTATUS);
 	GetParent()->SetWindowText(_T("Greek Vocabulary and Syntax Tester"));
 	SetScroll(1000, 1000);
+
 	SetWindowText(_T("Greek Vocabulary Tester"));
-	//	EnableToolTips();
+	EnableToolTips();
 	ReadFiles();
 }
 
 /*
 	Set the scroll sizes
 	*/
-void CGreekVocabView::SetScroll(int MaxSizeX, int MaxSizeY)	{
+void CGreekVocabView::SetScroll(int MaxSizeX, int MaxSizeY) {
 	CSize sizeTotal(MaxSizeX, MaxSizeY);
 	CSize sizePage(sizeTotal.cx / 2, sizeTotal.cy / 2);
 	CSize sizeLine(sizeTotal.cx / 50, sizeTotal.cy / 50);
@@ -226,14 +234,14 @@ void CGreekVocabView::OnVocabularyTest()
 
 /* Get vocabulary entries from the document object
 */
-void CGreekVocabView::ReadFiles()	{
+void CGreekVocabView::ReadFiles() {
 	CWnd* pWnd = GetParentFrame();
-	CMainFrame *pFrame = (CMainFrame*)pWnd;
-	CGreekVocabDoc *pDoc = (CGreekVocabDoc*)pFrame->GetActiveDocument();
+	CMainFrame* pFrame = (CMainFrame*)pWnd;
+	CGreekVocabDoc* pDoc = (CGreekVocabDoc*)pFrame->GetActiveDocument();
 
 	const std::vector<CString> vFileNames = pDoc->GetVocabFileNames();
-	for (CString strFileName : vFileNames)	{
-		std::vector<CString> *pvList = pDoc->GetVocabFileList(strFileName);
+	for (CString strFileName : vFileNames) {
+		std::vector<CString>* pvList = pDoc->GetVocabFileList(strFileName);
 		m_vEntries.insert(m_vEntries.end(), pvList->begin(), pvList->end());
 	}
 }
@@ -292,9 +300,9 @@ void CGreekVocabView::OnVerbsEnter()
 	Set the postitions and lengths of columns to be used in OnDraw()
 	Called by OnDraw()
 	*/
-void CGreekVocabView::SetSizes()	{
+void CGreekVocabView::SetSizes() {
 	TRACE0("SetSizes\n");
-	CDC *pDC = GetDC();
+	CDC* pDC = GetDC();
 	m_vLinesToDraw.clear();
 	m_vColumnStartsEn.clear();
 	m_vColumnStartsGk.clear();
@@ -306,7 +314,7 @@ void CGreekVocabView::SetSizes()	{
 	//round up to avoid overspill
 	//m_PerColumn = ceil(static_cast<double>(m_vEntries.size()) / m_Columns);
 	CFont fontTahoma;
-	if (!fontTahoma.CreatePointFont(120, _T("Tahoma")))	{
+	if (!fontTahoma.CreatePointFont(120, _T("Tahoma"))) {
 		throw CVocabException(_T("Failed to create font in view SetSizes"));
 	}
 	CFont* pFontOld = pDC->SelectObject(&fontTahoma);
@@ -318,16 +326,16 @@ void CGreekVocabView::SetSizes()	{
 	long iDocWidth = 0;
 	std::basic_string<TCHAR> sLongestGk, sLongestEn;
 	//find end of longest text line to get column sizes
-	for (std::basic_string<TCHAR> sLine : m_vEntries)	{
+	for (std::basic_string<TCHAR> sLine : m_vEntries) {
 		//split on the tab
 		std::string::size_type tabPos = sLine.find('\t');
 		std::basic_string<TCHAR> sGreek = sLine.substr(0, tabPos);
-		if (sGreek.size() > sLongestGk.size())	{
+		if (sGreek.size() > sLongestGk.size()) {
 			sLongestGk = sGreek;
 		}
 		std::basic_string<TCHAR> sEn = sLine.substr(tabPos + 1);
 		unsigned int iEnSize = sEn.size();
-		if (iEnSize > sLongestEn.size())	{
+		if (iEnSize > sLongestEn.size()) {
 			sLongestEn = sEn;
 		}
 		const char* szEn = (const char*)sEn.data();
@@ -344,7 +352,7 @@ void CGreekVocabView::SetSizes()	{
 		//	iMaxRightGk = std::max<long>(rect.right, iMaxRightGk);
 
 		iLineCount++;
-		if ((m_yPos + textSize.cy + 3) >= rectClient.bottom)	{
+		if ((m_yPos + textSize.cy + 3) >= rectClient.bottom) {
 			CRect rect(0, 0, 0, 0);
 			pDC->DrawText(sLongestEn.data(), &rect, DT_CALCRECT);
 			iMaxRightEn = std::max<long>(rect.right, iMaxRightEn);
@@ -364,7 +372,7 @@ void CGreekVocabView::SetSizes()	{
 	}
 	iDocWidth = m_xPos;
 	//If not at the end of a column record the values for the last column
-	if (iLineCount)	{
+	if (iLineCount) {
 		m_vColumnLengths.push_back(iLineCount + 1);
 		m_vColumnStartsGk.push_back(m_xPos);
 		m_vColumnStartsEn.push_back(m_xPos + iMaxRightGk + COLGAP);
@@ -390,8 +398,27 @@ void CGreekVocabView::OnSize(UINT nType, int cx, int cy)
 {
 	CScrollView::OnSize(nType, cx, cy);
 
-	if (m_vEntries.size())	{
+	if (m_vEntries.size()) {
 		SetSizes();	//arguments passed by reference
 	}
+	if (m_plblStatus) {
+		CRect clientRect;
+		GetClientRect(&clientRect);
+		CRect statusRect(clientRect.left, clientRect.bottom - STATUSTOP, 
+			clientRect.right, clientRect.bottom - STATUSTOP + STATUSHEIGHT);
+		m_plblStatus->MoveWindow(statusRect);
+	}
+}
 
+HBRUSH CGreekVocabView::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	HBRUSH hbr = CScrollView::OnCtlColor(pDC, pWnd, nCtlColor);
+	if (pWnd->GetDlgCtrlID() == IDC_STATICSTATUS) {
+		pDC->SetBkColor(RGB(0, 0, 0));
+		pDC->SetTextColor(RGB(255, 0, 0));
+		pDC->SetBkMode(TRANSPARENT);
+	}
+
+	// TODO:  Return a different brush if the default is not desired
+	return hbr;
 }

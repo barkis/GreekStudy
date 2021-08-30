@@ -108,6 +108,8 @@
 #define IDC_STATICPART                  1081
 #define IDC_STATICIMP                   1082
 #define IDC_COMBOCONJUGATION            1083
+#define IDC_STATICSTATUS	            1084
+
 #define ID_VOCABULARY_ENTRY             32776
 #define ID_VOCABULARY_ENTRYTEST         32777
 #define ID_VOCABULARY_HOVERTEST         32778
@@ -124,7 +126,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        322
 #define _APS_NEXT_COMMAND_VALUE         32798
-#define _APS_NEXT_CONTROL_VALUE         1084
+#define _APS_NEXT_CONTROL_VALUE         1085
 #define _APS_NEXT_SYMED_VALUE           313
 #endif
 #endif

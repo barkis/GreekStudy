@@ -1,40 +1,40 @@
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.pch
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\vc120.pdb
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\vc120.idb
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\stdafx.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\verb.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\verbdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\noundlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\nounentrytestdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\nounnamesdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\enterdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\filenamesdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekedit.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocabdoc.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocabexception.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocabview.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\hovertest.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\mainfrm.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\mdllistbox.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\scrolllistbox.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\entrytestdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\util.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\verbentrytestdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\verbnamesdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\adjectivedlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\declension.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\fileselectdlg.obj
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\debug\greekvocab.ilk
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\debug\greekvocab.exe
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\debug\greekvocab.pdb
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.res
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\cl.command.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\cl.read.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\cl.write.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\link.command.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\link.read.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\link.write.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\rc.command.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\rc.read.1.tlog
-c:\users\matthew\documents\visual studio 2013\projects\greekvocab\greekvocab\debug\greekvocab.tlog\rc.write.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.pch
+d:\projects\cpp\greekstudy\greekvocab\debug\vc142.pdb
+d:\projects\cpp\greekstudy\greekvocab\debug\vc142.idb
+d:\projects\cpp\greekstudy\greekvocab\debug\stdafx.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\entrytestdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\scrolllistbox.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\mdllistbox.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\mainfrm.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\hovertest.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocabview.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocabexception.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocabdoc.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekedit.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\filenamesdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\enterdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\nounnamesdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\nounentrytestdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\noundlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\verbdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\verb.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\fileselectdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\declension.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\adjectivedlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\verbnamesdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\verbentrytestdlg.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\util.obj
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.res
+d:\projects\cpp\greekstudy\debug\greekvocab.exe
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.ilk
+d:\projects\cpp\greekstudy\debug\greekvocab.pdb
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\cl.read.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\cl.write.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\cl.command.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\rc.read.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\rc.write.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\rc.command.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\link.read.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\link.write.1.tlog
+d:\projects\cpp\greekstudy\greekvocab\debug\greekvocab.tlog\link.command.1.tlog

@@ -231,6 +231,18 @@ void CNounEntryTestDlg::OnChangeEditRange(UINT ID)
 		CString strTry;
 		pGreekEdit->GetWindowText(strTry);
 		strTry.MakeLower();
+		if (strTry.GetLength() == strTranslation.GetLength()) {
+			//if (strTry.Right(1) == "σ") {
+			std::wstring sTry((LPCTSTR)strTry);
+			if(sTry[sTry.size() - 1] ==  wchar_t(963))	{	//'σ'
+				TRACE("Sigma last letter\n");
+				sTry[sTry.size() - 1] = wchar_t(962);	//ς
+				pGreekEdit->SetWindowText(sTry.c_str());
+				TRACE("sTry is %s\n", sTry.c_str());
+				strTry = strTry.Left(strTry.GetLength() - 1) + (CString)"";
+				strTry = (CString)sTry.c_str();
+			}
+		}
 		if (strTranslation == strTry)	{
 			m_TextColor = m_Black;
 		}
